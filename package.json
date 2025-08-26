@@ -1,0 +1,38 @@
+{
+  "name": "angular-microfrontend-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo para aplicación Angular con microfrontends usando Native Federation",
+  "scripts": {
+    "install:all": "cd apps/host-app && call npm install && cd ../micro-frontend-1 && call npm install && cd ../micro-frontend-2 && call npm install",
+    "start": "echo Para desarrollo ejecutar en 3 terminales separadas: && echo 1) npm run start:host && echo 2) npm run start:micro-frontend-1 && echo 3) npm run start:micro-frontend-2",
+    "start:host": "cd apps/host-app && call npm start",
+    "start:micro-frontend-1": "cd apps/micro-frontend-1 && call npm start",
+    "start:micro-frontend-2": "cd apps/micro-frontend-2 && call npm start",
+    "build": "npm run build:all",
+    "build:host": "cd apps/host-app && call npm run build",
+    "build:micro-frontend-1": "cd apps/micro-frontend-1 && call npm run build",
+    "build:micro-frontend-2": "cd apps/micro-frontend-2 && call npm run build",
+    "build:all": "npm run build:micro-frontend-1 && npm run build:micro-frontend-2 && npm run build:host",
+    "test": "npm run test:all",
+    "test:host": "cd apps/host-app && call npm test",
+    "test:micro-frontend-1": "cd apps/micro-frontend-1 && call npm test",
+    "test:micro-frontend-2": "cd apps/micro-frontend-2 && call npm test",
+    "test:all": "npm run test:host && npm run test:micro-frontend-1 && npm run test:micro-frontend-2",
+    "clean:host": "cd apps/host-app && rmdir /s /q dist node_modules 2>nul || echo Limpiado host",
+    "clean:micro-frontend-1": "cd apps/micro-frontend-1 && rmdir /s /q dist node_modules 2>nul || echo Limpiado MF1",
+    "clean:micro-frontend-2": "cd apps/micro-frontend-2 && rmdir /s /q dist node_modules 2>nul || echo Limpiado MF2",
+    "clean:all": "npm run clean:host && npm run clean:micro-frontend-1 && npm run clean:micro-frontend-2 && rmdir /s /q node_modules 2>nul || echo Limpiado todo",
+    "reinstall": "npm run clean:all && npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

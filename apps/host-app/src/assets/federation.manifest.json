@@ -1,0 +1,4 @@
+{
+  "micro-frontend-1": "http://localhost:4201/remoteEntry.json",
+  "micro-frontend-2": "http://localhost:4202/remoteEntry.json"
+}
