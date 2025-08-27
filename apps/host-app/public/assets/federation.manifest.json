@@ -1,8 +1,0 @@
-{
-  "remotes": {
-    "micro-frontend-1": "http://localhost:4201/remoteEntry.js",
-    "micro-frontend-2": "http://localhost:4202/remoteEntry.js"
-  },
-  "exposes": {},
-  "shared": {}
-}

@@ -4,11 +4,11 @@ import { RouterOutlet, Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, RouterModule],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-export class App {
-  protected title = 'hots-app';
+export class AppComponent {
+  protected title = 'host-app';
 
   constructor(private router: Router) {}
 
