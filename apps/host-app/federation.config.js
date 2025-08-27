@@ -10,12 +10,12 @@ module.exports = withNativeFederation({
     }),
   },
 
-  skip: [
+  /* skip: [
     'rxjs/ajax',
     'rxjs/fetch',
     'rxjs/testing',
     'rxjs/webSocket',
-  ],
+  ], */
 
   /* features: {
     ignoreUnusedDeps: true

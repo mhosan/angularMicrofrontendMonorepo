@@ -4,8 +4,7 @@ module.exports = withNativeFederation({
   name: 'micro-frontend-1',
 
   exposes: {
-    './Component': './src/app/app.component.ts',
-    './routes': './src/app/app.routes.ts'
+    './Component': './src/app/app.component.ts'
   },
 
   shared: {
@@ -16,7 +15,7 @@ module.exports = withNativeFederation({
     }),
   },
 
-  skip: [
+/*   skip: [
     'rxjs/ajax',
     'rxjs/fetch',
     'rxjs/testing',
@@ -25,6 +24,6 @@ module.exports = withNativeFederation({
 
   features: {
     ignoreUnusedDeps: true
-  }
+  } */
 
 });
