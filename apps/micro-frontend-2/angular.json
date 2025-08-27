@@ -30,7 +30,7 @@
 									"target": "micro-frontend-2:serve-original:development",
 									"rebuildDelay": 0,
 									"dev": true,
-									"port": 0
+									"port": 4202
 								},
 								"configurations": {
 									"production": {
